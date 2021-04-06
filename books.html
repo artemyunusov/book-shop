@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="assets/styles/styles.min.css">
+</head>
+
+<body>
+
+  <svg style="display: none;">
+    <symbol id="basket" viewBox="0 0 23 23">
+      <g>
+        <path d="M15.8666 6.4736H17.8077L14.9302 1.5368C14.6983 1.13677 14.1846 1.00039 13.7846 1.23678C13.3846 1.46862 13.2482 1.9823 13.4846 2.38233L15.8666 6.4736Z"/>
+        <path d="M9.27965 2.38227C9.51149 1.98223 9.37966 1.46855 8.97962 1.23671C8.57959 1.00487 8.06591 1.1367 7.83407 1.53674L4.95654 6.47808H6.89762L9.27965 2.38227Z"/>
+        <path d="M21.0216 7.9873H1.729C0.942572 7.9873 0.306152 8.62372 0.306152 9.41016V10.9876C0.306152 11.774 0.942572 12.4104 1.729 12.4104H2.1745L3.54735 19.852C3.72009 20.7293 4.52016 21.4249 5.35205 21.4249H5.89755H9.47969C9.84336 21.4249 10.3161 21.4249 10.798 21.4249H11.2344H11.6708C12.1526 21.4249 12.6254 21.4249 12.9891 21.4249H16.5712H17.1167C17.9486 21.4249 18.7487 20.7293 18.9214 19.852L20.3034 12.4059H21.0262C21.8126 12.4059 22.449 11.7695 22.449 10.983V9.40561C22.4445 8.62372 21.808 7.9873 21.0216 7.9873ZM8.16139 15.4243V18.6337C8.16139 19.0928 7.78863 19.4383 7.35677 19.4383C6.89764 19.4383 6.55216 19.0656 6.55216 18.6337V17.2881V14.1333C6.55216 13.6742 6.92492 13.3287 7.35677 13.3287C7.8159 13.3287 8.16139 13.7014 8.16139 14.1333V15.4243ZM10.7434 15.4243V18.6337C10.7434 19.0928 10.3707 19.4383 9.93882 19.4383C9.47969 19.4383 9.1342 19.0656 9.1342 18.6337V17.2881V14.1333C9.1342 13.6742 9.50696 13.3287 9.93882 13.3287C10.3707 13.3287 10.7434 13.7014 10.7434 14.1333V15.4243ZM13.3391 17.2881V18.6337C13.3391 19.0656 12.9936 19.4383 12.5345 19.4383C12.1026 19.4383 11.7299 19.0928 11.7299 18.6337V15.4243V14.1333C11.7299 13.7014 12.1026 13.3287 12.5345 13.3287C12.9664 13.3287 13.3391 13.6742 13.3391 14.1333V17.2881ZM15.9212 17.2881V18.6337C15.9212 19.0656 15.5757 19.4383 15.1165 19.4383C14.6847 19.4383 14.3119 19.0928 14.3119 18.6337V15.4243V14.1333C14.3119 13.7014 14.6574 13.3287 15.1165 13.3287C15.5484 13.3287 15.9212 13.6742 15.9212 14.1333V17.2881Z"/>
+      </g>
+    </symbol>
+  
+    <symbol id="cartlight"  viewBox="0 0 12 12">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.80159 7.1144H4.47241L3.75702 4.49231H9.11264L7.80159 7.1144ZM9.85549 4.03247C9.69511 3.77288 9.41717 3.61817 9.11213 3.61817H3.51833L3.2487 2.62921C3.19669 2.43911 3.02407 2.30713 2.82698 2.30713H1.95295C1.71128 2.30713 1.51593 2.50291 1.51593 2.74414C1.51593 2.98538 1.71128 3.18116 1.95295 3.18116H2.4931L3.7163 7.66625C3.76831 7.85635 3.94093 7.98833 4.13802 7.98833H8.07116C8.23679 7.98833 8.38799 7.89481 8.46229 7.74666L9.89395 4.8829C10.0307 4.60976 10.0159 4.29205 9.85549 4.03247ZM3.91959 8.86253C3.55774 8.86253 3.26406 9.15577 3.26406 9.51805C3.26406 9.88034 3.55774 10.1736 3.91959 10.1736C4.28143 10.1736 4.57511 9.88034 4.57511 9.51805C4.57511 9.15577 4.28143 8.86253 3.91959 8.86253ZM7.63423 9.51805C7.63423 9.15577 7.9279 8.86253 8.28975 8.86253C8.6516 8.86253 8.94527 9.15577 8.94527 9.51805C8.94527 9.88034 8.6516 10.1736 8.28975 10.1736C7.9279 10.1736 7.63423 9.88034 7.63423 9.51805Z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.80159 7.1144H4.47241L3.75702 4.49231H9.11264L7.80159 7.1144ZM9.85549 4.03247C9.69511 3.77288 9.41717 3.61817 9.11213 3.61817H3.51833L3.2487 2.62921C3.19669 2.43911 3.02407 2.30713 2.82698 2.30713H1.95295C1.71128 2.30713 1.51593 2.50291 1.51593 2.74414C1.51593 2.98538 1.71128 3.18116 1.95295 3.18116H2.4931L3.7163 7.66625C3.76831 7.85635 3.94093 7.98833 4.13802 7.98833H8.07116C8.23679 7.98833 8.38799 7.89481 8.46229 7.74666L9.89395 4.8829C10.0307 4.60976 10.0159 4.29205 9.85549 4.03247ZM3.91959 8.86253C3.55774 8.86253 3.26406 9.15577 3.26406 9.51805C3.26406 9.88034 3.55774 10.1736 3.91959 10.1736C4.28143 10.1736 4.57511 9.88034 4.57511 9.51805C4.57511 9.15577 4.28143 8.86253 3.91959 8.86253ZM7.63423 9.51805C7.63423 9.15577 7.9279 8.86253 8.28975 8.86253C8.6516 8.86253 8.94527 9.15577 8.94527 9.51805C8.94527 9.88034 8.6516 10.1736 8.28975 10.1736C7.9279 10.1736 7.63423 9.88034 7.63423 9.51805Z"/>
+      </g>
+    </symbol>
+  
+    <symbol id="cart"  viewBox="0 0 20 20">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6523 11.6235H7.30397L5.9398 6.64198H16.1523L13.6523 11.6235ZM17.569 5.76857C17.2632 5.2754 16.7332 4.98149 16.1515 4.98149H5.48484L4.97067 3.10262C4.8715 2.74146 4.54234 2.49072 4.1665 2.49072H2.49984C2.039 2.49072 1.6665 2.86268 1.6665 3.32098C1.6665 3.77928 2.039 4.15123 2.49984 4.15123H3.52984L5.86234 12.6721C5.9615 13.0333 6.29067 13.284 6.6665 13.284H14.1665C14.4823 13.284 14.7707 13.1064 14.9123 12.8249L17.6423 7.38424C17.9032 6.86533 17.8748 6.26174 17.569 5.76857ZM6.25002 14.9445C5.56002 14.9445 5.00002 15.5016 5.00002 16.1899C5.00002 16.8782 5.56002 17.4353 6.25002 17.4353C6.94002 17.4353 7.50002 16.8782 7.50002 16.1899C7.50002 15.5016 6.94002 14.9445 6.25002 14.9445ZM13.3333 16.1899C13.3333 15.5016 13.8933 14.9445 14.5833 14.9445C15.2733 14.9445 15.8333 15.5016 15.8333 16.1899C15.8333 16.8782 15.2733 17.4353 14.5833 17.4353C13.8933 17.4353 13.3333 16.8782 13.3333 16.1899Z" fill="#00AC4E"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6523 11.6235H7.30397L5.9398 6.64198H16.1523L13.6523 11.6235ZM17.569 5.76857C17.2632 5.2754 16.7332 4.98149 16.1515 4.98149H5.48484L4.97067 3.10262C4.8715 2.74146 4.54234 2.49072 4.1665 2.49072H2.49984C2.039 2.49072 1.6665 2.86268 1.6665 3.32098C1.6665 3.77928 2.039 4.15123 2.49984 4.15123H3.52984L5.86234 12.6721C5.9615 13.0333 6.29067 13.284 6.6665 13.284H14.1665C14.4823 13.284 14.7707 13.1064 14.9123 12.8249L17.6423 7.38424C17.9032 6.86533 17.8748 6.26174 17.569 5.76857ZM6.25002 14.9445C5.56002 14.9445 5.00002 15.5016 5.00002 16.1899C5.00002 16.8782 5.56002 17.4353 6.25002 17.4353C6.94002 17.4353 7.50002 16.8782 7.50002 16.1899C7.50002 15.5016 6.94002 14.9445 6.25002 14.9445ZM13.3333 16.1899C13.3333 15.5016 13.8933 14.9445 14.5833 14.9445C15.2733 14.9445 15.8333 15.5016 15.8333 16.1899C15.8333 16.8782 15.2733 17.4353 14.5833 17.4353C13.8933 17.4353 13.3333 16.8782 13.3333 16.1899Z" fill="#00AC4E"/>
+      </g>
+    </symbol>
+  
+    <symbol id="home"  viewBox="0 0 22 21">
+      <g>
+        <path d="M20.6778 8.27875L18.1334 6.1618V2.77619C18.1334 2.39494 17.8295 2.08472 17.4561 2.08472H15.8551C15.4816 2.08472 15.1777 2.39494 15.1777 2.77619V3.70256L11.7779 0.873898C11.5319 0.66935 11.2078 0.556641 10.8652 0.556641C10.5239 0.556641 10.2013 0.668658 9.95675 0.872138L1.05686 8.27869C0.652481 8.61506 0.676743 8.90805 0.727174 9.05276C0.777483 9.19715 0.939491 9.43941 1.45895 9.43941H2.67762V19.1795C2.67762 19.8746 3.23009 20.44 3.90916 20.44H7.75771C8.43106 20.44 8.95846 19.8863 8.95846 19.1795V15.1853C8.95846 14.8429 9.26665 14.5312 9.60502 14.5312H12.1912C12.5138 14.5312 12.7762 14.8246 12.7762 15.1853V19.1795C12.7762 19.8628 13.3543 20.44 14.0386 20.44H17.8255C18.5046 20.44 19.0571 19.8745 19.0571 19.1795V9.43941H20.2757C20.7952 9.43941 20.9571 9.19715 21.0075 9.05276C21.0579 8.90805 21.0822 8.61506 20.6778 8.27875Z"/>
+      </g>
+    </symbol>
+  
+    <symbol id="menuburger"  viewBox="0 0 23 13">
+      <g>
+        <rect width="20.3416" height="2.34711" rx="1.17355" fill="#333333"/>
+        <rect y="5.08545" width="22.2975" height="2.34711" rx="1.17355" fill="#333333"/>
+        <rect y="10.1709" width="10.9532" height="2.34711" rx="1.17355" fill="#333333"/>
+      </g>
+    </symbol>
+  
+    <symbol id="phone"  viewBox="0 0 18 18">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.95013 3.00001C3.87463 3.00001 3.00013 3.87451 3.00013 4.95001C3.00013 10.491 7.50838 15 13.0501 15C14.1249 15 15.0001 14.1255 15.0001 13.05C15.0001 12.9668 14.9949 12.885 14.9844 12.804L11.5194 12.009C11.4504 12.141 11.3746 12.2843 11.3056 12.4178C10.9636 13.0703 10.7161 13.5443 10.0846 13.29C7.60513 12.42 5.58088 10.395 4.69963 7.8855C4.43188 7.29675 4.94188 7.02976 5.58838 6.69226C5.71963 6.62326 5.86138 6.54901 5.99113 6.48151L5.19613 3.01576C5.11288 3.00526 5.03188 3.00001 4.95013 3.00001ZM13.0501 16.5C6.68112 16.5 1.50012 11.319 1.50012 4.95C1.50012 3.04725 3.04737 1.5 4.95012 1.5C5.14512 1.5 5.33787 1.5165 5.52462 1.54875C5.70687 1.578 5.88987 1.6245 6.06837 1.686C6.31212 1.77075 6.49587 1.9755 6.55362 2.2275L7.58037 6.7005C7.63737 6.9465 7.56612 7.2045 7.39062 7.3875C7.28862 7.494 7.28637 7.49625 6.35637 7.983C7.10937 9.6135 8.41812 10.9178 10.0156 11.6453C10.5031 10.7145 10.5061 10.7115 10.6126 10.6095C10.7956 10.434 11.0551 10.3658 11.2996 10.4198L15.7734 11.4465C16.0246 11.5043 16.2294 11.6873 16.3134 11.931C16.3749 12.108 16.4214 12.291 16.4521 12.4793C16.4836 12.6645 16.5001 12.8565 16.5001 13.05C16.5001 14.9528 14.9521 16.5 13.0501 16.5Z" fill="#00AC4E"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.95013 3.00001C3.87463 3.00001 3.00013 3.87451 3.00013 4.95001C3.00013 10.491 7.50838 15 13.0501 15C14.1249 15 15.0001 14.1255 15.0001 13.05C15.0001 12.9668 14.9949 12.885 14.9844 12.804L11.5194 12.009C11.4504 12.141 11.3746 12.2843 11.3056 12.4178C10.9636 13.0703 10.7161 13.5443 10.0846 13.29C7.60513 12.42 5.58088 10.395 4.69963 7.8855C4.43188 7.29675 4.94188 7.02976 5.58838 6.69226C5.71963 6.62326 5.86138 6.54901 5.99113 6.48151L5.19613 3.01576C5.11288 3.00526 5.03188 3.00001 4.95013 3.00001ZM13.0501 16.5C6.68112 16.5 1.50012 11.319 1.50012 4.95C1.50012 3.04725 3.04737 1.5 4.95012 1.5C5.14512 1.5 5.33787 1.5165 5.52462 1.54875C5.70687 1.578 5.88987 1.6245 6.06837 1.686C6.31212 1.77075 6.49587 1.9755 6.55362 2.2275L7.58037 6.7005C7.63737 6.9465 7.56612 7.2045 7.39062 7.3875C7.28862 7.494 7.28637 7.49625 6.35637 7.983C7.10937 9.6135 8.41812 10.9178 10.0156 11.6453C10.5031 10.7145 10.5061 10.7115 10.6126 10.6095C10.7956 10.434 11.0551 10.3658 11.2996 10.4198L15.7734 11.4465C16.0246 11.5043 16.2294 11.6873 16.3134 11.931C16.3749 12.108 16.4214 12.291 16.4521 12.4793C16.4836 12.6645 16.5001 12.8565 16.5001 13.05C16.5001 14.9528 14.9521 16.5 13.0501 16.5Z" fill="#00AC4E"/>
+      </g>
+    </symbol>
+  
+    <symbol id="search"  viewBox="0 0 21 21">
+      <g>
+        <path d="M14.0848 2.4214C10.8676 -0.795743 5.6328 -0.795677 2.41559 2.4214C-0.801617 5.63861 -0.801617 10.8734 2.41559 14.0905C5.14496 16.8199 9.20421 17.2332 12.3741 15.3317C12.3741 15.3317 12.6032 15.1951 12.7876 15.3796C13.8399 16.432 16.9974 19.5894 16.9974 19.5894C17.8352 20.4273 19.0068 20.6268 19.75 19.8837L19.8778 19.7558C20.621 19.0127 20.4216 17.841 19.5837 17.0032C19.5837 17.0032 16.4329 13.8524 15.3828 12.8022C15.1894 12.6089 15.326 12.3798 15.326 12.3798C17.2275 9.21003 16.8142 5.15076 14.0848 2.4214ZM12.5614 12.5672C10.1842 14.9444 6.31632 14.9443 3.93913 12.5671C1.56201 10.1899 1.56194 6.322 3.93913 3.94488C6.31625 1.56769 10.1842 1.56769 12.5614 3.94488C14.9385 6.32207 14.9385 10.1899 12.5614 12.5672Z"/>
+        <path d="M7.76078 12.0411C7.76078 12.1517 7.73903 12.2642 7.69324 12.3726C7.50994 12.8057 7.01024 13.0083 6.5771 12.825C3.85461 11.673 2.57699 8.52091 3.72903 5.79849C3.91233 5.36541 4.41203 5.16279 4.84517 5.34609C5.27832 5.52945 5.48081 6.02902 5.29758 6.46229C4.5116 8.31973 5.38333 10.4705 7.24077 11.2564C7.56563 11.3939 7.76078 11.7093 7.76078 12.0411Z"/>
+      </g>
+    </symbol>
+  
+    <symbol id="star"  viewBox="0 0 8 9">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.62444 7.62074C5.57383 7.62074 5.5229 7.60889 5.47614 7.58455L3.84289 6.73125L2.20996 7.58455C2.1017 7.6406 1.97101 7.63099 1.873 7.55924C1.77434 7.48749 1.72534 7.3661 1.74616 7.24598L2.05718 5.44329L0.737509 4.16687C0.649745 4.08199 0.618035 3.9545 0.655511 3.83791C0.692987 3.72196 0.793243 3.63708 0.914319 3.61978L2.74007 3.35457L3.55621 1.71267C3.66448 1.49486 4.02162 1.49486 4.12988 1.71267L4.94603 3.35457L6.77178 3.61978C6.89286 3.63708 6.99311 3.72196 7.03059 3.83791C7.06806 3.9545 7.03635 4.08199 6.94859 4.16687L5.62892 5.44329L5.93994 7.24598C5.96076 7.3661 5.91143 7.48749 5.8131 7.55924C5.75737 7.60024 5.69106 7.62074 5.62444 7.62074Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.62444 7.62074C5.57383 7.62074 5.5229 7.60889 5.47614 7.58455L3.84289 6.73125L2.20996 7.58455C2.1017 7.6406 1.97101 7.63099 1.873 7.55924C1.77434 7.48749 1.72534 7.3661 1.74616 7.24598L2.05718 5.44329L0.737509 4.16687C0.649745 4.08199 0.618035 3.9545 0.655511 3.83791C0.692987 3.72196 0.793243 3.63708 0.914319 3.61978L2.74007 3.35457L3.55621 1.71267C3.66448 1.49486 4.02162 1.49486 4.12988 1.71267L4.94603 3.35457L6.77178 3.61978C6.89286 3.63708 6.99311 3.72196 7.03059 3.83791C7.06806 3.9545 7.03635 4.08199 6.94859 4.16687L5.62892 5.44329L5.93994 7.24598C5.96076 7.3661 5.91143 7.48749 5.8131 7.55924C5.75737 7.60024 5.69106 7.62074 5.62444 7.62074Z"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container">
+      <div class="menu__burger">
+        <img src="./assets/images/menuburger.png" alt="">
+      </div>    <!-- logo -->
+      <div class="logo">
+        <a class="logo__img" href="#">
+          <img src="./assets/images/logo.jpg" alt="">     
+        </a>
+      </div>    <!-- logo -->
+      <nav class="nav">
+        <div class="burger__block">
+          <div class="burger__close">
+            <img src="./assets/images/arrowmenu.png" alt="">
+          </div>
+          <div class="burger__logo">
+            <a href="">al-zuho</a>
+          </div>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="" class="nav__link sub-nav-show">товары</a>
+            <ul class="sub-nav">
+              <li class="sub-nav-item">
+                <a href="" class="sub-nav-link">книги</a>
+              </li>
+              <li class="sub-nav-item">
+                <a href="" class="sub-nav-link">сумки</a>
+              </li>
+              <li class="sub-nav-item">
+                <a href="" class="sub-nav-link">духи Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sequi?</a>
+              </li>
+              <li class="sub-nav-item">
+                <a href="" class="sub-nav-link">аксессуары</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">доставка</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">о нас</a>
+          </li>
+        </ul>
+      </nav>    <!-- nav -->
+      <div class="option">
+        <div class="option__tel">
+          <a href="tel:998974489700">
+            <svg width="20" height="20">
+              <use xlink:href="#phone"></use>
+            </svg>
+            <span>+998(97) 448-97-00</span>
+          </a>
+        </div>
+        <div class="option__cart">
+          <a href="./cart.html">
+            <svg width="30" height="30">
+              <use xlink:href="#cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>    <!-- option -->
+    </div>  <!-- container -->
+  </header><!-- header -->
+
+	
+	<div class="gift">
+	  <div class="container">
+	    <div class="gift__wrap">
+	      <div class="gift__content">
+	        <div class="gift__suptitle">Подарок на первый заказ.</div>
+	        <div class="gift__subtitle">Получите 500 рублей за подписку на рассылку</div>
+	        <a href="" class="gift__btn">подписаться</a>
+	      </div>
+	      <div class="gift__img">
+	        <img src="./assets/images/3.jpg" alt="" width="410" height="253">
+	      </div>
+	    </div>    <!-- gift__wrap  -->
+	  </div>  <!-- container -->
+	</div><!-- gift -->
+	
+	<div class="tabs">
+	  <div class="container">
+	    <ul class="tabs__list">
+	      <li class="tabs__item">
+	        <a href="./books.html" class="tabs__link active">книги</a>
+	      </li>
+	      <li class="tabs__item">
+	        <a href="./parfumes.html" class="tabs__link">духи</a>
+	      </li>
+	      <li class="tabs__item">
+	        <a href="./bags.html" class="tabs__link">сумки</a>
+	      </li>
+	      <li class="tabs__item">
+	        <a href="./accessories.html" class="tabs__link">аксессуары</a>
+	      </li>
+	    </ul>
+	  </div>  <!-- container -->
+	</div><!-- tabs -->
+	
+	<div class="full">
+	  <div class="container">
+	    <div class="full__title">все товары - <span id="categoryName">книги</span></div>
+	    <div class="full__grid">
+	      <div class="product">
+	        <a href="./single.html" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15" style="fill: #00ac4e;">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text"></p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15" style="fill: #00ac4e;">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text"></p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15" style="fill: #00ac4e;">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text"></p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	      <div class="product">
+	        <a href="" class="product__img" width="205" height="125">
+	          <img src="./assets/images/1.jpg" alt="" width="205" height="125">
+	        </a>
+	        <div class="product__content">
+	          <div class="product__title">Lorem, ipsum dolor.</div>
+	          <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas natus a voluptatem nam sed tempore mollitia nobis explicabo cum.</p>
+	        </div>
+	        <div class="product__option">
+	          <div class="product__star">
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	            <svg width="15" height="15">
+	              <use xlink:href="#star"></use>
+	            </svg>
+	          </div>
+	          <div class="product__price">100.000 сум(ов)</div>
+	          <a href="" class="product__buy">В корзину</a>
+	        </div>
+	      </div>      <!-- product -->
+	    </div>    <!-- items__grid -->
+	  </div>  <!-- container -->
+	</div><!-- full -->
+	
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__top-col">
+          <div class="footer__top-col-title">при проблеми с сайта</div>
+          <a href="tel:998974489700" class="footer__top-col-num">+998974489700</a>
+        </div>
+        <div class="footer__top-col">
+          <div class="footer__top-col-title">Для приема заказов</div>
+          <a href="tel:998974489700" class="footer__top-col-num">+998974489700</a>
+        </div>
+        <div class="footer__top-col">
+          <a href="#" class="footer__top-col-telegram">мы в telegram</a>
+          <a href="#" class="footer__top-col-instagram">мы в instagram</a>
+        </div>
+      </div>
+      <div class="footer__mid">
+        <div class="footer__mid-work-time">график работы каждый день с 9:00 до 21:00</div>
+        <a href="mailto:al-zuho@gmail.com" class="footer__mid-mail">email:al-zuho@gmail.com</a>
+        <a href="#" class="footer__mid-help">поддержка</a>
+      </div>
+      <div class="footer__low">
+        <div class="footer__low-doc"><span>&#169</span>2021 al-zuho</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./assets/js/slick.js"></script>
+	<script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
